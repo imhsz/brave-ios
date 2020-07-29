@@ -1,4 +1,4 @@
-build: Release
-brave-browser: master (581b9cde2d15d5cffc8aa9eea1472f9171e3c707)
-brave-core: issues/8396 (96586ef16c2bcdabb2d62b019f763c8ecdf1bb1c)
-  latest tag: v1.13.3
+build: Debug
+brave-browser: master (552bd9873c94a40b2593949f10578c9b49ae27e8)
+brave-core: issues/9870 (4c241c497bfebe41364f435a9b619d02042fbd8e)
+  latest tag: v1.14.7

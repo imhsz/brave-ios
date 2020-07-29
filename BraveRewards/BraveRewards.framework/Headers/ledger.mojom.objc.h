@@ -393,6 +393,7 @@ NS_SWIFT_NAME(ExternalWallet)
 @property (nonatomic, copy) NSString * type;
 @property (nonatomic, copy) NSString * token;
 @property (nonatomic, copy) NSString * address;
+@property (nonatomic, copy) NSString * anonAddress;
 @property (nonatomic) BATWalletStatus status;
 @property (nonatomic, copy) NSString * verifyUrl;
 @property (nonatomic, copy) NSString * addUrl;
@@ -401,7 +402,6 @@ NS_SWIFT_NAME(ExternalWallet)
 @property (nonatomic, copy) NSString * userName;
 @property (nonatomic, copy) NSString * accountUrl;
 @property (nonatomic, copy) NSString * loginUrl;
-@property (nonatomic) bool transferred;
 @end
 
 NS_SWIFT_NAME(BalanceReportInfo)
@@ -452,8 +452,6 @@ NS_SWIFT_NAME(TransferFee)
 @interface BATTransferFee : NSObject <NSCopying>
 @property (nonatomic, copy) NSString * id;
 @property (nonatomic) double amount;
-@property (nonatomic) uint64_t executionTimestamp;
-@property (nonatomic) uint32_t executionId;
 @end
 
 NS_SWIFT_NAME(ContributionQueue)
@@ -505,7 +503,6 @@ NS_SWIFT_NAME(ClientInfo)
 @interface BATClientInfo : NSObject <NSCopying>
 @property (nonatomic) BATPlatform platform;
 @property (nonatomic) BATOperatingSystem os;
-@property (nonatomic, copy) NSString * channel;
 @end
 
 NS_SWIFT_NAME(RecurringTip)
@@ -594,6 +591,7 @@ NS_SWIFT_NAME(SKUTransaction)
 NS_SWIFT_NAME(UrlResponse)
 @interface BATUrlResponse : NSObject <NSCopying>
 @property (nonatomic, copy) NSString * url;
+@property (nonatomic, copy) NSString * error;
 @property (nonatomic) int32_t statusCode;
 @property (nonatomic, copy) NSString * body;
 @property (nonatomic, copy) NSDictionary<NSString *, NSString *> * headers;
