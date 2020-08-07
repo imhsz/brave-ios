@@ -78,7 +78,10 @@ class CacheClearable: Clearable {
                                                        WKWebsiteDataTypeMemoryCache,
                                                        WKWebsiteDataTypeFetchCache]
             WKWebsiteDataStore.default().removeData(ofTypes: localStorageClearables, modifiedSince: Date(timeIntervalSinceReferenceDate: 0)) {
-                ImageCache.shared.clear()
+                WebImageCacheManager.shared.clearDiskCache()
+                WebImageCacheManager.shared.clearMemoryCache()
+                WebImageCacheWithNoPrivacyProtectionManager.shared.clearDiskCache()
+                WebImageCacheWithNoPrivacyProtectionManager.shared.clearMemoryCache()
                 result.fill(Maybe<()>(success: ()))
             }
         }
